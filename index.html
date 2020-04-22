@@ -36,6 +36,18 @@
       float:right;
     }
   </style>
+
+  <script language=javascript type="text/javascript">
+    const strWindowFeatures = "width=780,height=265,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
+    let windowObjectReference;
+
+    function openPopup(){
+        windowObjectReference = window.open(
+            'investing.html',
+            'My Investing Dashboard',
+            strWindowFeatures);
+    }
+    </script>
 </head>
 <body>
 
@@ -48,6 +60,7 @@
           <li><a href="https://br.linkedin.com/in/edgar-gabaldi-29207b77">Linkedin</a></li>
           <li><a href="https://github.com/edgabaldi">Github</a></li>
           <li><a href="https://www.facebook.com/edgar.gabaldi">Facebook</a></li>
+          <li><a href="javascript:openPopup();">Investing</a></li>
         </ul>
       </div>
     </nav>
