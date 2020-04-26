@@ -4,7 +4,7 @@ let windowObjectReference;
 
 function openPopup(){
     windowObjectReference = window.open(
-        'investing.html', 
+        'investing/investing.html', 
         'Investing Dashboard',
         strWindowFeatures);
 }
