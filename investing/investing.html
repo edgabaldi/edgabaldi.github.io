@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
 
+      body {
+        background-color: #343a40;
+      }
+
         .greenBg{
             background-color: #28a745;
         }
@@ -34,101 +38,221 @@
     <title>Investing</title>
   </head>
   <body>
-    <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-        <thead>
-          <tr>
-            <th scope="col">Instrument</th>
-            <th scope="col">Net change</th>
-            <th scope="col">Last price</th>
-            <th scope="col">Daily low</th>
-            <th scope="col">Daily high</th>
-            <th scope="col">Last close</th>
-            <th scope="col">Opening</th>
-            <th scope="col">hour</th>
-          </tr>
-        </thead>
-        <tbody>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#principal" role="tab" aria-controls="principal" aria-selected="true">Principal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#dx" role="tab" aria-controls="dx" aria-selected="false">DX</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#brasil" role="tab" aria-controls="brasil" aria-selected="false">Brasil</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane show active" id="principal" role="tabpanel" aria-labelledby="home-tab">
+        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+          <thead>
             <tr>
-                <td class="text-left"><strong>ES 06-20</strong></td>
-                <td class="font-weight-bold text-center pid-8839-pcp">0,00%</td>
-                <td class="pid-8839-last">0,00</td>
-                <td class="pid-8839-low">00,00</td>
-                <td class="pid-8839-high">00,00</td>
-                <td>00,00</td>
-                <td>00,00</td>
-                <td class="pid-8839-time">00:00:00</td>
+              <th scope="col">Ativo</th>
+              <th scope="col">%</th>
+              <th scope="col">Último</th>
+              <th scope="col">Mínima</th>
+              <th scope="col">Máxima</th>
+              <th scope="col">Horário</th>
             </tr>
-            <tr>
-                <td class="text-left"><strong>CL 06-20</strong></td>
-                <td class="font-weight-bold text-center pid-8849-pcp">0,00%</td>
-                <td class="pid-8849-last">0,00</td>
-                <td class="pid-8849-low">00,00</td>
-                <td class="pid-8849-high">00,00</td>
-                <td>00,00</td>
-                <td>00,00</td>
-                <td class="pid-8849-time">00:00:00</td>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="text-left"><strong>S&P 500 Fut</strong></td>
+                  <td class="font-weight-bold text-center pid-8839-pcp">0,00%</td>
+                  <td class="pid-8839-last">0,00</td>
+                  <td class="pid-8839-low">00,00</td>
+                  <td class="pid-8839-high">00,00</td>
+                  <td class="pid-8839-time">00:00:00</td>
               </tr>
+              <tr>
+                  <td class="text-left"><strong>Oil WTI</strong></td>
+                  <td class="font-weight-bold text-center pid-8849-pcp">0,00%</td>
+                  <td class="pid-8849-last">0,00</td>
+                  <td class="pid-8849-low">00,00</td>
+                  <td class="pid-8849-high">00,00</td>
+                  <td class="pid-8849-time">00:00:00</td>
+                </tr>
+              <tr>
+                  <td class="text-left"><strong>DX</strong></td>
+                  <td class="font-weight-bold text-center pid-8827-pcp">0,00%</td>
+                  <td class="pid-8827-last">0,00</td>
+                  <td class="pid-8827-low">00,00</td>
+                  <td class="pid-8827-high">00,00</td>
+                  <td class="pid-8827-time">00:00:00</td>
+              </tr>
+              <tr>
+                  <td class="text-left"><strong>USD/EUR</strong></td>
+                  <td class="font-weight-bold text-center pid-2124-pcp">0,00%</td>
+                  <td class="pid-2124-last">0,00</td>
+                  <td class="pid-2124-low">00,00</td>
+                  <td class="pid-2124-high">00,00</td>
+                  <td class="pid-2124-time">00:00:00</td>
+              </tr>  
+              <tr>
+                <td class="text-left"><strong>Gold</strong></td>
+                <td class="font-weight-bold text-center pid-8830-pcp">0,00%</td>
+                <td class="pid-8830-last">0,00</td>
+                <td class="pid-8830-low">00,00</td>
+                <td class="pid-8830-high">00,00</td>
+                <td class="pid-8830-time">00:00:00</td>
+              </tr>
+              <tr>
+                <td class="text-left"><strong>U.S. 10 Treasury</strong></td>
+                <td class="font-weight-bold text-center pid-23705-pcp">0,00%</td>
+                <td class="pid-23705-last">0,00</td>
+                <td class="pid-23705-low">00,00</td>
+                <td class="pid-23705-high">00,00</td>
+                <td class="pid-23705-time">00:00:00</td>
+              </tr>
+              <tr>
+                <td class="text-left"><strong>USD/BRL</strong></td>
+                <td class="font-weight-bold text-center pid-2103-pcp">0,00%</td>
+                <td class="pid-2103-last">0,00</td>
+                <td class="pid-2103-low">00,00</td>
+                <td class="pid-2103-high">00,00</td>
+                <td class="pid-2103-time">00:00:00</td>
+              </tr>
+          </tbody>
+        </table>  
+      </div>
+      <div class="tab-pane" id="brasil" role="tabpanel" aria-labelledby="profile-tab">
+        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+          <thead>
             <tr>
-                <td class="text-left"><strong>6J 06-20</strong></td>
-                <td class="font-weight-bold text-center pid-8827-pcp">0,00%</td>
-                <td class="pid-8827-last">0,00</td>
-                <td class="pid-8827-low">00,00</td>
-                <td class="pid-8827-high">00,00</td>
-                <td>00,00</td>
-                <td>00,00</td>
-                <td class="pid-8827-time">00:00:00</td>
+              <th scope="col">Ativo</th>
+              <th scope="col">%</th>
+              <th scope="col">Último</th>
+              <th scope="col">Mínima</th>
+              <th scope="col">Máxima</th>
+              <th scope="col">Horário</th>
+            </tr>
+          </thead>
+          <tbody>
+  
+            <tr>
+              <td class="text-left"><strong>USD/BRL</strong></td>
+              <td class="font-weight-bold text-center pid-2103-pcp">0,00%</td>
+              <td class="pid-2103-last">0,00</td>
+              <td class="pid-2103-low">00,00</td>
+              <td class="pid-2103-high">00,00</td>
+              <td class="pid-2103-time">00:00:00</td>
             </tr>
             <tr>
-                <td class="text-left"><strong>6E 06-20</strong></td>
-                <td class="font-weight-bold text-center pid-2124-pcp">0,00%</td>
-                <td class="pid-2124-last">0,00</td>
-                <td class="pid-2124-low">00,00</td>
-                <td class="pid-2124-high">00,00</td>
-                <td>00,00</td>
-                <td>00,00</td>
-                <td class="pid-2124-time">00:00:00</td>
+              <td class="text-left"><strong>IBOV</strong></td>
+              <td class="font-weight-bold text-center pid-17920-pcp">0,00%</td>
+              <td class="pid-17920-last">0,00</td>
+              <td class="pid-17920-low">00,00</td>
+              <td class="pid-17920-high">00,00</td>
+              <td class="pid-17920-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>IBOV Fut</strong></td>
+              <td class="font-weight-bold text-center pid-941612-pcp">0,00%</td>
+              <td class="pid-941612-last">0,00</td>
+              <td class="pid-941612-low">00,00</td>
+              <td class="pid-941612-high">00,00</td>
+              <td class="pid-941612-time">00:00:00</td>
+            </tr>
+          </tbody>
+        </table>  
+
+      </div>
+      <div class="tab-pane" id="dx" role="tabpanel" aria-labelledby="contact-tab">
+        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+          <thead>
+            <tr>
+              <th scope="col">Ativo</th>
+              <th scope="col">%</th>
+              <th scope="col">Último</th>
+              <th scope="col">Mínima</th>
+              <th scope="col">Máxima</th>
+              <th scope="col">Horário</th>
+            </tr>
+          </thead>
+          <tbody>
+  
+            <tr>
+              <td class="text-left"><strong>DX</strong></td>
+              <td class="font-weight-bold text-center pid-8827-pcp">0,00%</td>
+              <td class="pid-8827-last">0,00</td>
+              <td class="pid-8827-low">00,00</td>
+              <td class="pid-8827-high">00,00</td>
+              <td class="pid-8827-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/EUR</strong></td>
+              <td class="font-weight-bold text-center pid-2124-pcp">0,00%</td>
+              <td class="pid-2124-last">0,00</td>
+              <td class="pid-2124-low">00,00</td>
+              <td class="pid-2124-high">00,00</td>
+              <td class="pid-2124-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/CAD</strong></td>
+              <td class="font-weight-bold text-center pid-7-pcp">0,00%</td>
+              <td class="pid-7-last">0,00</td>
+              <td class="pid-7-low">00,00</td>
+              <td class="pid-7-high">00,00</td>
+              <td class="pid-7-time">00:00:00</td>
             </tr>
 
-          <tr>
-            <td class="text-left"><strong>USD/BRL</strong></td>
-            <td class="font-weight-bold text-center pid-2103-pcp">0,00%</td>
-            <td class="pid-2103-last">0,00</td>
-            <td class="pid-2103-low">00,00</td>
-            <td class="pid-2103-high">00,00</td>
-            <td>00,00</td>
-            <td>00,00</td>
-            <td class="pid-2103-time">00:00:00</td>
-          </tr>
-          <tr>
-            <td class="text-left"><strong>GC-06-20</strong></td>
-            <td class="font-weight-bold text-center pid-8830-pcp">0,00%</td>
-            <td class="pid-8830-last">0,00</td>
-            <td class="pid-8830-low">00,00</td>
-            <td class="pid-8830-high">00,00</td>
-            <td>00,00</td>
-            <td>00,00</td>
-            <td class="pid-8830-time">00:00:00</td>
-          </tr>
-          <tr>
-            <td class="text-left"><strong>U.S. 10 Treasury</strong></td>
-            <td class="font-weight-bold text-center pid-23705-pcp">0,00%</td>
-            <td class="pid-23705-last">0,00</td>
-            <td class="pid-23705-low">00,00</td>
-            <td class="pid-23705-high">00,00</td>
-            <td>00,00</td>
-            <td>00,00</td>
-            <td class="pid-23705-time">00:00:00</td>
-          </tr>
-        </tbody>
-      </table>
+            <tr>
+              <td class="text-left"><strong>USD/CHF</strong></td>
+              <td class="font-weight-bold text-center pid-4-pcp">0,00%</td>
+              <td class="pid-4-last">0,00</td>
+              <td class="pid-4-low">00,00</td>
+              <td class="pid-4-high">00,00</td>
+              <td class="pid-4-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/GBP</strong></td>
+              <td class="font-weight-bold text-center pid-2126-pcp">0,00%</td>
+              <td class="pid-2126-last">0,00</td>
+              <td class="pid-2126-low">00,00</td>
+              <td class="pid-2126-high">00,00</td>
+              <td class="pid-2126-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/JPY</strong></td>
+              <td class="font-weight-bold text-center pid-3-pcp">0,00%</td>
+              <td class="pid-3-last">0,00</td>
+              <td class="pid-3-low">00,00</td>
+              <td class="pid-3-high">00,00</td>
+              <td class="pid-3-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/SEK</strong></td>
+              <td class="font-weight-bold text-center pid-41-pcp">0,00%</td>
+              <td class="pid-41-last">0,00</td>
+              <td class="pid-41-low">00,00</td>
+              <td class="pid-41-high">00,00</td>
+              <td class="pid-41-time">00:00:00</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
+    </div>
+
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
       <script type="text/javascript"> stream = "https://stream119.forexpros.com:443";</script>
       <script>window.timezoneOffset = -10800;</script>
       <script src="https://streamjs.investing.com/tools/fxindex1.js" ></script>
       <script src="https://i-invdn-com.akamaized.net/js/main-1.17.254.min.js" ></script>
       <script>
-          var pid_arr = Array("pid-2103:", "pid-8839:", "pid-941612:", "pid-8827:", "pid-8849:", "pid-2124:", "pid-17920:", "pid-8830:", "pid-23705:");
+          var pid_arr = Array("pid-2103:", "pid-8839:", "pid-941612:", "pid-8827:", "pid-8849:", "pid-2124:", "pid-17920:", "pid-8830:", "pid-23705:", "pid-17920:", "pid-941612:", "pid-7:", "pid-4:","pid-3:","pid-41:","pid-2126:",);
           var TimeZoneID = 12;
       </script>
   </body>
