@@ -2,17 +2,20 @@
     <head>
         <title>test</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="investing/css/custom.css" />
     </head>
-    <body>
-        <div class="box">
-            <div class="element">
-                <button onclick="javascript:openPopup();">abrir monitor</button>
-            </div>
-          </div>
+    <body class="pt-5">
 
-          <script>
-          
-          </script>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Olá!</h1>
+                <p class="lead">Analise o contexto do mercado financeiro</p>
+                <hr class="my-4">
+                <p>Indices mundiais, cambio e calendário econômico, fornecido pelo Investing.</p>
+                <p class="lead">
+                <button class="btn btn-primary btn-lg" onclick="javascript:openPopupIndicadores();">Indicadores</button>
+                <button class="btn btn-outline-primary btn-lg" onclick="javascript:openPopupCalendario();">Calendário Econômico</button>
+                </p>
+            </div>
+        </div>
           <script type="text/javascript" src="investing/js/popup.js"></script>
 </html>
