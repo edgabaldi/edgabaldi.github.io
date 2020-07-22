@@ -4,6 +4,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#EEE">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -48,6 +50,9 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#brasil" role="tab" aria-controls="brasil" aria-selected="false">Brasil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#emergentes" role="tab" aria-controls="brasil" aria-selected="false">Emergentes</a>
       </li>
     </ul>
     <div class="tab-content" id="myTabContent">
@@ -239,6 +244,92 @@
           </tbody>
         </table>  
       </div>
+      <div class="tab-pane" id="emergentes" role="tabpanel" aria-labelledby="contact-tab">
+        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+          <thead>
+            <tr>
+              <th scope="col">Ativo</th>
+              <th scope="col">%</th>
+              <th scope="col">Último</th>
+              <th scope="col">Horário</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-left"><strong>USD/BRL</strong></td>
+              <td class="font-weight-bold text-center pid-2103-pcp">0,00%</td>
+              <td class="pid-2103-last">0,00</td>
+              <td class="pid-2103-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/CNY</strong></td>
+              <td class="font-weight-bold text-center pid-2111-pcp">0,00%</td>
+              <td class="pid-2111-last">0,00</td>
+              <td class="pid-2111-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/CZK</strong></td>
+              <td class="font-weight-bold text-center pid-103-pcp">0,00%</td>
+              <td class="pid-103-last">0,00</td>
+              <td class="pid-103-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/HUF</strong></td>
+              <td class="font-weight-bold text-center pid-91-pcp">0,00%</td>
+              <td class="pid-91-last">0,00</td>
+              <td class="pid-91-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/HUF</strong></td>
+              <td class="font-weight-bold text-center pid-91-pcp">0,00%</td>
+              <td class="pid-91-last">0,00</td>
+              <td class="pid-91-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/IDR</strong></td>
+              <td class="font-weight-bold text-center pid-2138-pcp">0,00%</td>
+              <td class="pid-2138-last">0,00</td>
+              <td class="pid-2138-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/INR</strong></td>
+              <td class="font-weight-bold text-center pid-160-pcp">0,00%</td>
+              <td class="pid-160-last">0,00</td>
+              <td class="pid-160-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/MXN</strong></td>
+              <td class="font-weight-bold text-center pid-39-pcp">0,00%</td>
+              <td class="pid-39-last">0,00</td>
+              <td class="pid-39-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/PLN</strong></td>
+              <td class="font-weight-bold text-center pid-40-pcp">0,00%</td>
+              <td class="pid-40-last">0,00</td>
+              <td class="pid-39-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/RUB</strong></td>
+              <td class="font-weight-bold text-center pid-2186-pcp">0,00%</td>
+              <td class="pid-2186-last">0,00</td>
+              <td class="pid-2186-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/TRY</strong></td>
+              <td class="font-weight-bold text-center pid-18-pcp">0,00%</td>
+              <td class="pid-18-last">0,00</td>
+              <td class="pid-18-time">00:00:00</td>
+            </tr>
+            <tr>
+              <td class="text-left"><strong>USD/ZAR</strong></td>
+              <td class="font-weight-bold text-center pid-17-pcp">0,00%</td>
+              <td class="pid-17-last">0,00</td>
+              <td class="pid-17-time">00:00:00</td>
+            </tr>
+          </tbody>
+        </table>  
+      </div>
     </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -252,7 +343,7 @@
       <script src="https://streamjs.investing.com/tools/fxindex1.js" ></script>
       <script src="https://i-invdn-com.akamaized.net/js/main-1.17.254.min.js" ></script>
       <script>
-          var pid_arr = Array("pid-2103:", "pid-8839:", "pid-941612:", "pid-8827:", "pid-8849:", "pid-2124:", "pid-17920:", "pid-8830:", "pid-23705:", "pid-17920:", "pid-941612:", "pid-7:", "pid-4:","pid-3:","pid-41:","pid-2126:",);
+          var pid_arr = Array("pid-2103:", "pid-8839:", "pid-941612:", "pid-8827:", "pid-8849:", "pid-2124:", "pid-17920:", "pid-8830:", "pid-23705:", "pid-17920:", "pid-941612:", "pid-7:", "pid-4:","pid-3:","pid-41:","pid-2126:", "pid-2111:", "pid-160:", "pid-39:", "pid-103:", "pid-91:", "pid-2138:", "pid-40:", "pid-2186:", "pid-18:", "pid-17:");
           var TimeZoneID = 12;
       </script>
   </body>
