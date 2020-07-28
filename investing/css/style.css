@@ -1,0 +1,23 @@
+body {
+    background-color: #343a40;
+  }
+
+.greenBg{
+    background-color: #28a745;
+}
+
+.greenFont {
+    color:#28a745;
+}
+
+.redFont{
+    color:#dc3545
+}
+
+.redBg{
+    background-color: #dc3545;
+}
+
+td {
+    text-align: center;
+}
