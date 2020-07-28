@@ -1,0 +1,13 @@
+{
+    "name": "Investing Dashboard",
+    "short_name": "Investing Dashboard",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#212529",
+    "icons": [{
+        "src": "/icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }]
+}
