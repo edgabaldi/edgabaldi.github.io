@@ -13,9 +13,9 @@
   </head>
   <body>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <ul class="nav nav-tabs" role="tablist">
       <li class="nav-item">
-        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#principal" role="tab" aria-controls="principal" aria-selected="true">Principal</a>
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#principal-tab" role="tab" aria-controls="principal-tab" aria-selected="true">Principal</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#dx" role="tab" aria-controls="dx" aria-selected="false">DX</a>
@@ -23,21 +23,22 @@
       <li class="nav-item">
         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#emergentes" role="tab" aria-controls="brasil" aria-selected="false">Emergentes</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#eua" role="tab" aria-controls="brasil" aria-selected="false">EUA</a>
+      </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
-      <div class="tab-pane show active" id="principal" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-content">
+      <div class="tab-pane show active" id="principal-tab" role="tabpanel" aria-labelledby="principal-tab">
         <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
           <thead>
             <tr>
               <th scope="col">Ativo</th>
               <th scope="col">%</th>
               <th scope="col">Último</th>
-              <th scope="col">Mínima</th>
-              <th scope="col">Máxima</th>
               <th scope="col">Horário</th>
             </tr>
           </thead>
-          <tbody id="principal-node"></tbody>
+          <tbody id="principal-table"></tbody>
         </table>  
       </div>
       <div class="tab-pane" id="dx" role="tabpanel" aria-labelledby="contact-tab">
@@ -47,8 +48,6 @@
               <th scope="col">Ativo</th>
               <th scope="col">%</th>
               <th scope="col">Último</th>
-              <th scope="col">Mínima</th>
-              <th scope="col">Máxima</th>
               <th scope="col">Horário</th>
             </tr>
           </thead>
@@ -65,9 +64,23 @@
               <th scope="col">Horário</th>
             </tr>
           </thead>
-          <tbody id="emergentes-node"></tbody>
+          <tbody id="emergentes-table"></tbody>
         </table>  
       </div>
+      <div class="tab-pane" id="eua" role="tabpanel" aria-labelledby="contact-tab">
+        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+          <thead>
+            <tr>
+              <th scope="col">Ativo</th>
+              <th scope="col">%</th>
+              <th scope="col">Último</th>
+              <th scope="col">Horário</th>
+            </tr>
+          </thead>
+          <tbody id="eua-table"></tbody>
+        </table>  
+      </div>
+      
     </div>
 
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

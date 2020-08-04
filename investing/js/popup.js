@@ -1,5 +1,5 @@
 
-const strWindowFeatures = "width=780,height=300,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
+const strWindowFeatures = "width=450,height=450,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
 let windowObjectReference;
 
 function openPopupIndicadores(){
