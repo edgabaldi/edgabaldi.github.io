@@ -40,7 +40,26 @@ const eua = [
     {name: 'Russell 2000', pid: '170'},
 ]
 
-let all_data = principal.concat(dx, emergentes, eua);
+const europa = [
+    {name: 'DAX (Alemanha)', pid: '172'},
+    {name: 'FTSE 100 (Reino Unido)', pid: '27'},
+    {name: 'Euro Stoxx 50', pid: '175'},
+]
+
+const asia = [
+    {name: 'Hang Seng', pid: '179'},
+    {name: 'China A50', pid: '28930'},
+    {name: 'Shanghai', pid: '40820'},
+    {name: 'SZSE Component', pid: '942630'},
+    {name: 'Kospi (Sul-coreano)', pid: '37426'},
+    {name: 'Taiex (Taiwan)', pid: '38017'},
+    {name: 'DJ Shanghai', pid: '954522'},
+    {name: 'China A50', pid: '28930'},
+    {name: 'S&P/ASX 200', pid: '171'},
+
+]
+
+let all_data = principal.concat(dx, emergentes, eua, europa, asia);
 
 const row = (name, pid) => {
 
@@ -62,6 +81,8 @@ createTable('#principal-table', principal);
 createTable('#dx-table', dx);
 createTable('#emergentes-table', emergentes);
 createTable('#eua-table', eua);
+createTable('#europa-table', europa);
+createTable('#asia-table', asia);
 
 var TimeZoneID = 12;
 var pid_arr = all_data.map( obj => `pid-${obj.pid}:`);
