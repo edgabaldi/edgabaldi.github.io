@@ -1,3 +1,7 @@
+html { 
+    font-size: 0.8rem;
+}
+
 body {
     background-color: #343a40;
   }
@@ -20,4 +24,11 @@ body {
 
 td {
     text-align: center;
+}
+
+caption {
+    caption-side: top;
+    padding:5px 5px;
+    text-transform: uppercase;
+    color:#FFF;
 }

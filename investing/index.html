@@ -14,95 +14,111 @@
   </head>
   <body>
 
-    <ul class="nav nav-tabs" role="tablist">
-      <li class="nav-item"><a class="nav-link active" id="home-tab" data-toggle="tab" href="#principal-tab" role="tab" aria-controls="principal-tab" aria-selected="true">Principal</a></li>
-      <li class="nav-item"><a class="nav-link" id="contact-tab" data-toggle="tab" href="#dx" role="tab" aria-controls="dx" aria-selected="false">DX</a></li>
-      <li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#emergentes" role="tab" aria-controls="emergentes" aria-selected="false">Emergentes</a></li>
-      <li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#eua" role="tab" aria-controls="eua" aria-selected="false">EUA</a></li>
-      <li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#europa" role="tab" aria-controls="europa" aria-selected="false">Europa</a></li>
-      <li class="nav-item"><a class="nav-link" id="profile-tab" data-toggle="tab" href="#asia" role="tab" aria-controls="asia" aria-selected="false">Ásia</a></li>
-    </ul>
-    <div class="tab-content">
-      <div class="tab-pane show active" id="principal-tab" role="tabpanel" aria-labelledby="principal-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="principal-table"></tbody>
-        </table>  
-      </div>
-      <div class="tab-pane" id="dx" role="tabpanel" aria-labelledby="contact-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="dx-table"></tbody>
-        </table>  
-      </div>
-      <div class="tab-pane" id="emergentes" role="tabpanel" aria-labelledby="contact-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="emergentes-table"></tbody>
-        </table>  
-      </div>
-      <div class="tab-pane" id="eua" role="tabpanel" aria-labelledby="contact-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="eua-table"></tbody>
-        </table>  
-      </div>
-      <div class="tab-pane" id="europa" role="tabpanel" aria-labelledby="contact-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="europa-table"></tbody>
-        </table>  
-      </div>
-      <div class="tab-pane" id="asia" role="tabpanel" aria-labelledby="contact-tab">
-        <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
-          <thead>
-            <tr>
-              <th scope="col">Ativo</th>
-              <th scope="col">%</th>
-              <th scope="col">Último</th>
-              <th scope="col">Horário</th>
-            </tr>
-          </thead>
-          <tbody id="asia-table"></tbody>
-        </table>  
-      </div>
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col">
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">Principal</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="principal-table"></tbody>
+          </table>
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">DX</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="dx-table"></tbody>
+          </table>
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">Emergentes</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="emergentes-table"></tbody>
+          </table>
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">EUA</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="eua-table"></tbody>
+          </table>
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">Europa</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="europa-table"></tbody>
+          </table>
+
+        </div><!-- ./col -->
+
+        <div class="col">
+
+          <table class="table table-dark table-sm table-hover" style="margin-bottom: 0;">
+
+            <caption class="font-weight-bold text-center">Dólar no Mundo</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="dolar-table"></tbody>
+          </table>
+
+        </div><!-- ./col -->
+
+      </div><!-- ./row -->
       
-    </div>
+    </div> <!-- ./container-fluid -->
 
     <button class="add-button">Adicionar o App na sua tela de Inicio</button>
 
@@ -117,7 +133,7 @@
     <script src="https://streamjs.investing.com/tools/fxindex1.js" ></script>
     <script src="https://i-invdn-com.akamaized.net/js/main-1.17.254.min.js" ></script>
 
-    <script type="text/javascript" src="js/tables.js"></script>
+    <script type="text/javascript" src="js/tables.js" defer></script>
     <script src="js/index.js" defer></script>
 
   </body>
