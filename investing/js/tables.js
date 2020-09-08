@@ -38,9 +38,9 @@ const eua = [
 ]
 
 const europa = [
-    {sigla: 'DAX (Alemanha)', pid: '172'},
-    {sigla: 'FTSE 100 (Reino Unido)', pid: '27'},
-    {sigla: 'Euro Stoxx 50', pid: '175'},
+    {origem: 'Alemanha', sigla: 'DAX', pid: '8826'},
+    {origem: 'Reino Unido', sigla: 'FTSE 100', pid: '8838'},
+    {origem: 'Europa', sigla: 'Euro Stoxx 50', pid: '8867'},
 ]
 
 const asia = [
