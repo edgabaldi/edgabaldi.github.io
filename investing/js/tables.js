@@ -31,7 +31,6 @@ const emergentes = [
 ]
 
 const eua = [
-    {sigla: 'SP500 Fut', pid: '8839'},
     {sigla: 'Dow Jones', pid: '8873'},
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Russell 2000', pid: '8864'},
