@@ -41,6 +41,7 @@ const europa = [
     {origem: 'Alemanha', sigla: 'DAX', pid: '8826'},
     {origem: 'Reino Unido', sigla: 'FTSE 100', pid: '8838'},
     {origem: 'Europa', sigla: 'Euro Stoxx 50', pid: '8867'},
+    {origem: 'França', sigla: 'CAC 40', pid: '8853'},
 ]
 
 const asia = [
