@@ -61,13 +61,11 @@ const dolar = [
     {origem: "Chile", sigla: "USD/CLP", pid: "2110"},
     {origem: "Colombia", sigla: "USD/COP", pid: "2112"},
     {origem: "Costa Rica", sigla: "USD/CRC", pid: "2113"},
-    {origem: "Cuba", sigla: "USD/CUP", pid: "2114"},
     {origem: "Republica Dominicana", sigla: "USD/DOP", pid:"2118"},
     {origem: "Honduras", sigla: "USD/HNL", pid: "2135"},
     {origem: "Haiti", sigla:"USD/HTG", pid: "2137"},
     {origem: "Jamaica", sigla:"USD/JMD", pid: "2142"},
     {origem: "Nicarágua", sigla:"USD/NIO", pid: "2172"},
-    {origem: "Panamá", sigla:"USD/PAB", pid: "2176"},
     {origem: "Peru", sigla:"USD/PEN", pid: "2177"},
     {origem: "Paraguai", sigla:"USD/PYG", pid: "2181"},
     {origem: "El Salvador", sigla:"USD/SVC", pid: "2199"},
@@ -79,13 +77,15 @@ const dolar = [
     {origem: "Hong Kong", sigla:"USD/HKD", pid: "155"},
     {origem: "Israel", sigla:"USD/ILS", pid: "63"},
     {origem: "Coreia do Sul", sigla:"USD/KRW", pid: "650"},
-    {origem: "Malásia", sigla:"USD/MYR", pid: "2168"},
     {origem: "Filipinas", sigla:"USD/PHP", pid: "2179"},
     {origem: "Cingapura", sigla:"USD/SGD", pid: "42"},
     {origem: "Tailândia", sigla:"USD/THB", pid: "147"},
     {origem: "Taiwan", sigla:"USD/TWD", pid: "2206"},
     {origem: "Austrália", sigla:"USD/AUD", pid: "2091"},
-    {origem: "Nova Zelândia", sigla:"USD/NZD", pid: "2174"}
+    {origem: "Nova Zelândia", sigla:"USD/NZD", pid: "2174"},
+    {origem: "Cuba", sigla: "USD/CUP", pid: "2114"},
+    {origem: "Panamá", sigla:"USD/PAB", pid: "2176"},
+    {origem: "Malásia", sigla:"USD/MYR", pid: "2168"},
 ]
 
 let all_data = principal.concat(dolar, dx, emergentes, eua, europa, asia);
