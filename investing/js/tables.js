@@ -3,7 +3,8 @@ const principal = [
     {sigla: 'S&P 500 Fut', pid: '8839'},
     {sigla: 'WTI Oil', pid: '8849'},
     {sigla: 'Gold', pid: '8830'},
-    {sigla: 'U.S. 10 Treasury', pid: '23705'}
+    {sigla: 'USD/BRL', pid: '2103'},
+    {sigla: 'IBOV Fut', pid: '941612'}
 ];
 
 const dx = [
@@ -35,6 +36,7 @@ const eua = [
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Russell 2000', pid: '8864'},
     {sigla: 'VIX', pid: '8884'},
+    {sigla: 'U.S. 10 Treasury', pid: '23705'}    
 ]
 
 const europa = [
