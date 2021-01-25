@@ -1,34 +1,34 @@
 
 const principal = [
-    {sigla: 'S&P 500 Fut', pid: '8839'},
-    {sigla: 'WTI Oil', pid: '8849'},
-    {sigla: 'Gold', pid: '8830'},
-    {sigla: 'USD/BRL', pid: '2103'},
-    {sigla: 'IBOV Fut', pid: '941612'}
+    {origem: "SP500 Futuro", sigla: 'S&P 500 Fut', pid: '8839'},
+    {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
+    {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
+    {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
+    {origem: "IBOV Futuro", sigla: 'Indfut', pid: '941612'}
 ];
 
 const dx = [
-    {sigla: 'DX', pid: '8827'},
-    {sigla: 'USD/EUR', pid: '2124'},
-    {sigla: 'USD/CAD', pid: '7'},
-    {sigla: 'USD/CHF', pid: '4'},
-    {sigla: 'USD/GBP', pid: '2126'},
-    {sigla: 'USD/JPY', pid: '3'},
-    {sigla: 'USD/SEK', pid: '41'}
+    {origem: "Índice Dólar", sigla: 'DX', pid: '8827'},
+    {origem: "Euro", sigla: 'USD/EUR', pid: '2124'},
+    {origem: "Canadá", sigla: 'USD/CAD', pid: '7'},
+    {origem: "Suiça", sigla: 'USD/CHF', pid: '4'},
+    {origem: "Inglaterra", sigla: 'USD/GBP', pid: '2126'},
+    {origem: "Japão", sigla: 'USD/JPY', pid: '3'},
+    {origem: "Suecia", sigla: 'USD/SEK', pid: '41'}
 ];
 
 const emergentes = [
-    {sigla: 'USD/BRL', pid: '2103'},
-    {sigla: 'USD/CNY', pid: '2111'},
-    {sigla: 'USD/CZK', pid: '103'},
-    {sigla: 'USD/HUF', pid: '91'},
-    {sigla: 'USD/IDR', pid: '2138'},
-    {sigla: 'USD/INR', pid: '160'},
-    {sigla: 'USD/MXN', pid: '39'},
-    {sigla: 'USD/PLN', pid: '40'},
-    {sigla: 'USD/RUB', pid: '2186'},
-    {sigla: 'USD/TRY', pid: '18'},
-    {sigla: 'USD/ZAR', pid: '17'}
+    {origem: "Brasil", sigla: 'USD/BRL', pid: '2103'},
+    {origem: "China", sigla: 'USD/CNY', pid: '2111'},
+    {origem: "Chéquia", sigla: 'USD/CZK', pid: '103'},
+    {origem: "Hungria", sigla: 'USD/HUF', pid: '91'},
+    {origem: "Indonésia", sigla: 'USD/IDR', pid: '2138'},
+    {origem: "Índia", sigla: 'USD/INR', pid: '160'},
+    {origem: "México", sigla: 'USD/MXN', pid: '39'},
+    {origem: "Polônia", sigla: 'USD/PLN', pid: '40'},
+    {origem: "Rússia", sigla: 'USD/RUB', pid: '2186'},
+    {origem: "Turquia", sigla: 'USD/TRY', pid: '18'},
+    {origem: "África do Sul", sigla: 'USD/ZAR', pid: '17'}
 ]
 
 const eua = [
