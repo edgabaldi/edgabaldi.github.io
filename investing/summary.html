@@ -10,9 +10,9 @@
 
     <div class="container-fluid">
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-4 mt-2">
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -35,7 +35,7 @@
             </div><!-- ./col-->
 
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -58,7 +58,7 @@
             </div><!-- ./col-->
 
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -81,7 +81,7 @@
             </div><!-- ./col-->
 
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -104,7 +104,7 @@
             </div><!-- ./col-->
 
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -127,7 +127,7 @@
             </div><!-- ./col-->
 
             <div class="col">
-                <div class="card">
+                <div class="card h-100">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
@@ -168,19 +168,14 @@
         var TimeZoneID = 12;
     </script>
     <script>
-        // Create a closure
+        
         (function(){
-            // Your base, I'm in it!
+        
             var originalAddClassMethod = jQuery.fn.addClass;
 
             jQuery.fn.addClass = function(){
-                // Execute the original method.
                 var result = originalAddClassMethod.apply( this, arguments );
-
-                // trigger a custom event
                 jQuery(this).trigger('cssClassChanged');
-
-                // return the original result
                 return result;
             }
         })();
@@ -192,6 +187,7 @@
                 var value = $this.text().replace("%","");
                 var classe = parseFloat(value) >= 0 ? "text-white bg-success" : "text-white bg-danger";
                 $(this).closest(".card")
+                    .removeClass("text-white")
                     .removeClass("bg-danger")
                     .removeClass("bg-success")
                     .addClass(classe)
