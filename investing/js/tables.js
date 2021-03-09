@@ -4,7 +4,7 @@ const principal = [
     {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
     {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
-    {origem: "IBOV Futuro", sigla: 'Indfut', pid: '941612'}
+    {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'}
 ];
 
 const dx = [
@@ -96,7 +96,7 @@ const row = (obj) => {
 
     return `
         <tr>
-            <td class="text-left""><abbr title="${obj.origem}">${obj.sigla}</abbr></td>
+            <td class="text-left">${obj.sigla}</td>
             <td class="font-weight-bold text-center pid-${obj.pid}-pcp">0,00%</td>
             <td class="pid-${obj.pid}-last">0,00</td>
             <td class="pid-${obj.pid}-time">00:00:00</td>
@@ -118,4 +118,3 @@ createTable('#europa-table', europa);
 
 var TimeZoneID = 12;
 var pid_arr = all_data.map( obj => `pid-${obj.pid}:`);
-
