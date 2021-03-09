@@ -36,14 +36,16 @@ const eua = [
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Russell 2000', pid: '8864'},
     {sigla: 'VIX', pid: '8884'},
-    {sigla: 'U.S. 10 Treasury', pid: '23705'}    
+    {sigla: 'US10Y', pid: '23705'}    
 ]
 
 const europa = [
-    {origem: 'Alemanha', sigla: 'DAX', pid: '8826'},
-    {origem: 'Reino Unido', sigla: 'FTSE 100', pid: '8838'},
-    {origem: 'Europa', sigla: 'Euro Stoxx 50', pid: '8867'},
-    {origem: 'França', sigla: 'CAC 40', pid: '8853'},
+    {sigla: "Stoxx 600 Europe", pid: "40823"},
+    {sigla: 'Reino Unido', pid: '27'}, // FTSE 100
+    {sigla: 'Alemanha', pid: '8826'}, // DAX   
+    {sigla: "Milão", pid: "177"},
+    {sigla: "Madri", pid:"24228"},
+    {sigla: 'França', pid: '167'} //CAC 40
 ]
 
 const asia = [
