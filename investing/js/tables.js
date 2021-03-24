@@ -4,7 +4,8 @@ const principal = [
     {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
     {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
-    {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'}
+    {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'},
+    {origem: "Bitcoin", sigla: "USD/BTC", pid: "1057391"},
 ];
 
 const dx = [
@@ -36,7 +37,8 @@ const eua = [
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Russell 2000', pid: '8864'},
     {sigla: 'VIX', pid: '8884'},
-    {sigla: 'US10Y', pid: '23705'}    
+    {sigla: 'US10Y', pid: '23705'},
+    {sigla: 'US30Y', pid: "23706"}    
 ]
 
 const europa = [
