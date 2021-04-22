@@ -5,8 +5,12 @@ const principal = [
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
     {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
     {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'},
-    {origem: "Bitcoin", sigla: "USD/BTC", pid: "1057391"},
 ];
+
+const cryptos = [
+    {origem: "Bitcoin", sigla: "USD/BTC", pid: "1057391"},
+    {origem: "Ethereum", sigla: "USD/ETH", pid: "1061443"},
+]
 
 const dx = [
     {origem: "Índice Dólar", sigla: 'DX', pid: '8827'},
@@ -94,7 +98,7 @@ const dolar = [
     {origem: "Malásia", sigla:"USD/MYR", pid: "2168"},
 ]
 
-let all_data = principal.concat(dolar, dx, emergentes, eua, europa, asia);
+let all_data = principal.concat(dolar, dx, emergentes, eua, europa, asia, cryptos);
 
 const row = (obj) => {
 
@@ -119,6 +123,7 @@ createTable('#dx-table', dx);
 createTable('#emergentes-table', emergentes);
 createTable('#eua-table', eua);
 createTable('#europa-table', europa);
+createTable('#cryptos-table', cryptos);
 
 var TimeZoneID = 12;
 var pid_arr = all_data.map( obj => `pid-${obj.pid}:`);
