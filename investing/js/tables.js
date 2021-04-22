@@ -24,16 +24,17 @@ const dx = [
 
 const emergentes = [
     {origem: "Brasil", sigla: 'USD/BRL', pid: '2103'},
-    {origem: "China", sigla: 'USD/CNY', pid: '2111'},
-    {origem: "Chéquia", sigla: 'USD/CZK', pid: '103'},
-    {origem: "Hungria", sigla: 'USD/HUF', pid: '91'},
-    {origem: "Indonésia", sigla: 'USD/IDR', pid: '2138'},
-    {origem: "Índia", sigla: 'USD/INR', pid: '160'},
     {origem: "México", sigla: 'USD/MXN', pid: '39'},
+    {origem: "Hungria", sigla: 'USD/HUF', pid: '91'},
     {origem: "Polônia", sigla: 'USD/PLN', pid: '40'},
     {origem: "Rússia", sigla: 'USD/RUB', pid: '2186'},
     {origem: "Turquia", sigla: 'USD/TRY', pid: '18'},
-    {origem: "África do Sul", sigla: 'USD/ZAR', pid: '17'}
+    {origem: "África do Sul", sigla: 'USD/ZAR', pid: '17'},
+    {origem: "China", sigla: 'USD/CNY', pid: '2111'},
+    {origem: "Chéquia", sigla: 'USD/CZK', pid: '103'},
+    {origem: "Índia", sigla: 'USD/INR', pid: '160'},
+    {origem: "Indonésia", sigla: 'USD/IDR', pid: '2138'},
+
 ]
 
 const eua = [
