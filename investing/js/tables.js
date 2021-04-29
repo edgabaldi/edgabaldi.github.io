@@ -10,7 +10,8 @@ const principal = [
 const cryptos = [
     {origem: "Bitcoin", sigla: "USD/BTC", pid: "1057391"},
     {origem: "Ethereum", sigla: "USD/ETH", pid: "1061443"},
-]
+    {origem: "Polkadot", sigla: "USD/DOT", pid: "1165465"},
+];
 
 const dx = [
     {origem: "Índice Dólar", sigla: 'DX', pid: '8827'},
