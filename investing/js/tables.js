@@ -2,12 +2,13 @@ const eua = [
     {sigla: 'S&P 500 Fut', pid: '8839'},
     {sigla: 'Dow Jones', pid: '8873'},
     {sigla: 'Nasdaq', pid: '8874'},
+    {sigla: 'US10Y', pid: '23705'},
+];
+
+const commodities = [
     {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
-    // {sigla: 'Russell 2000', pid: '8864'},
-    // {sigla: 'VIX', pid: '8884'},
-    {sigla: 'US10Y', pid: '23705'},
-    // {sigla: 'US30Y', pid: "23706"}    
+    {origem: "Bloomberg Commodities", sigla: "BCOM", pid: '948434'},
 ];
 
 const brasil = [
@@ -103,7 +104,7 @@ const dolar = [
     {origem: "Malásia", sigla:"USD/MYR", pid: "2168"},
 ]
 
-let all_data = eua.concat(dolar, dx, emergentes, europa, cryptos, latam, brasil);
+let all_data = eua.concat(dolar, dx, emergentes, europa, cryptos, latam, brasil, commodities);
 
 const row = (obj) => {
 
@@ -123,6 +124,7 @@ const createTable = (table_name, data) => {
 }
 
 createTable('#eua-table', eua);
+createTable('#commodities-table', commodities);
 createTable('#dx-table', dx);
 
 createTable('#brasil-table', brasil);
