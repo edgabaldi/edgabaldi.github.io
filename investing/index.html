@@ -8,6 +8,7 @@
     <link rel="manifest" href="index.json">    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
   </head>
   <body>
@@ -181,6 +182,7 @@
     <script src="js/index.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9826X9TT9X"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -188,6 +190,32 @@
 
   gtag('config', 'G-9826X9TT9X');
 </script>
+<script>
 
-  </body>
+(function(){
+    var originalAddClassMethod = jQuery.fn.addClass;
+    jQuery.fn.addClass = function(){
+        var result = originalAddClassMethod.apply( this, arguments );
+        jQuery(this).trigger('cssClassChanged');
+        return result;
+    }
+})();
+
+$(function(){
+    $(".observer").bind('cssClassChanged', function(){ 
+      var $this = $(this);
+      let pid = $this.data('pid');
+      var $hora = $(`.data-${pid}-hora`);
+      let hora_str = $(`.pid-${pid}-time`).text();
+      
+      if(Boolean(hora_str)){
+          var $icon = $('<i>').addClass('bi bi-clock').attr('title', hora_str).clone();
+          $hora.empty().append($icon);
+      }
+
+    });
+}); 
+</script>
+
+</body>
 </html>

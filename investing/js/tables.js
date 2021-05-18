@@ -110,10 +110,10 @@ const row = (obj) => {
 
     return `
         <tr>
-            <td class="text-left">${obj.sigla}</td>
-            <td class="font-weight-bold text-center pid-${obj.pid}-pcp">0,00%</td>
+            <td class="text-left">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
+            <td class="observer font-weight-bold text-center pid-${obj.pid}-pcp" data-pid="${obj.pid}">0,00%</td>
             <td class="pid-${obj.pid}-last">0,00</td>
-            <td class="pid-${obj.pid}-time">00:00:00</td>
+            <td class="data-${obj.pid}-hora"><i class="bi bi-circle"></i></td>
         </tr>`;
 }
 
