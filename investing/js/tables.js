@@ -14,6 +14,7 @@ const commodities = [
 const brasil = [
     {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
     {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'},
+    {origin: "EWZ", sigla: "EWZ", pid: '509'},
 ];
 
 const cryptos = [
