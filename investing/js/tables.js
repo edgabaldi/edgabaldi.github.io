@@ -26,11 +26,11 @@ const cryptos = [
 const dx = [
     {origem: "Índice Dólar", sigla: 'DX', pid: '8827'},
     {origem: "Euro", sigla: 'USD/EUR', pid: '2124'},
-    {origem: "Canadá", sigla: 'USD/CAD', pid: '7'},
-    {origem: "Suiça", sigla: 'USD/CHF', pid: '4'},
-    {origem: "Inglaterra", sigla: 'USD/GBP', pid: '2126'},
     {origem: "Japão", sigla: 'USD/JPY', pid: '3'},
-    {origem: "Suecia", sigla: 'USD/SEK', pid: '41'}
+    {origem: "Inglaterra", sigla: 'USD/GBP', pid: '2126'},
+    {origem: "Canadá", sigla: 'USD/CAD', pid: '7'},
+    {origem: "Suecia", sigla: 'USD/SEK', pid: '41'},
+    {origem: "Suiça", sigla: 'USD/CHF', pid: '4'}
 ];
 
 const emergentes = [
