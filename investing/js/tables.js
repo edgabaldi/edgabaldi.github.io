@@ -1,14 +1,19 @@
 const eua = [
     {sigla: 'S&P 500 Fut', pid: '8839'},
-    {sigla: 'Dow Jones', pid: '8873'},
     {sigla: 'Nasdaq', pid: '8874'},
+    {sigla: 'Dow Jones', pid: '8873'},
+    {sigla: 'Russell 2000', pid: '14202'},
     {sigla: 'US10Y', pid: '23705'},
+    {sigla: "VIX", pid: '44336'},
 ];
 
 const commodities = [
     {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
+    {origem: "Minério de Ferro (DCE)", sigla: "Minério de Ferro (DCE)", pid: '961741'},
+    {origem: "Cobre", sigla: "Cobre", pid: '8831'},
     {origem: "Bloomberg Commodities", sigla: "BCOM", pid: '948434'},
+    
 ];
 
 const brasil = [
