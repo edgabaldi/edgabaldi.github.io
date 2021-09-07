@@ -25,7 +25,6 @@ const brasil = [
 const cryptos = [
     {origem: "Bitcoin", sigla: "USD/BTC", pid: "1057391"},
     {origem: "Ethereum", sigla: "USD/ETH", pid: "1061443"},
-    {origem: "Polkadot", sigla: "USD/DOT", pid: "1165465"},
 ];
 
 const dx = [
@@ -142,5 +141,4 @@ createTable("#dolar-table", dolar);
 createTable('#europa-table', europa);
 createTable('#cryptos-table', cryptos);
 
-var TimeZoneID = 12;
 var pid_arr = all_data.map( obj => `pid-${obj.pid}:`);

@@ -3,7 +3,14 @@ console.log('stream: '+stream);
 var sock = null;
 //var server_heartbeat_interval = 5;
 new_conn = function (){
-			var options = {protocols_whitelist: ['websocket', 'xdr-streaming', 'xhr-streaming', 'iframe-eventsource', 'xdr-polling', 'xhr-polling'], debug: true, jsessionid: false, server_heartbeat_interval: 4000, heartbeatTimeout: 2000};
+
+			var options = {
+				protocols_whitelist: ['websocket', 'xdr-streaming', 'xhr-streaming', 'iframe-eventsource', 'xdr-polling', 'xhr-polling'], 
+				debug: true, 
+				jsessionid: false, 
+				server_heartbeat_interval: 4000, 
+				heartbeatTimeout: 2000
+			};
 			//sock = new SockJS('//'+stream+':443/echo', null, options);
 			sock = new SockJS(stream+'/echo', null, options);
 			//sock = new SockJS('http://web61.forexpros.com:80/echo');
@@ -23,16 +30,15 @@ new_conn = function (){
 			var setHeartbeat = function() {
 			    clearTimeout(heartbeat);
 			    heartbeat = setTimeout(function() {
-				console.log("heartbeat");
-				sock.send(JSON.stringify({ _event: "heartbeat", data: 'h'}));
+					console.log("heartbeat");
+					sock.send(JSON.stringify({ _event: "heartbeat", data: 'h'}));
 			    }, 3000);
 			    death = setTimeout(function() {
-				console.log("Diying...");
-				sock.close();
-			}, 60000);
-			                                                          };
+					console.log("Diying...");
+					sock.close();
+				}, 60000);
+			};
 			                                                          
-             
 			on("heartbeat", function(e,data) {
 			    if (suicide) return; // let death take me
 			    clearTimeout(death); // death averted
@@ -89,8 +95,8 @@ new_conn = function (){
 				        $('.pid-' + pid_obj.pid + '-arrowSmall').removeClass('redArrowIcon');
 				        $('.pid-' + pid_obj.pid + '-arrowSmall').removeClass('grayArrowIcon');
 				        
-				        if (pid_obj.pc_col == 'greenFont')
-				        {  	$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('greenArrowIcon');
+				        if (pid_obj.pc_col == 'greenFont'){
+							$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('greenArrowIcon');
 				        }else if (pid_obj.pc_col == 'redFont'){
 				        	$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('redArrowIcon');
 				        }else if (pid_obj.pc_col == 'blackFont'){
@@ -114,22 +120,20 @@ new_conn = function (){
 					    
 					    
 					    $('.pid-'+pid_obj.pid+'-turnover').html(pid_obj.turnover);
-					    if ( (pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') )
-					    {
+
+					    if ((pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') ){
 					    	$('.pid-'+pid_obj.pid+'-last').addClass(pid_obj.last_dir);
 					    	$('.pid-'+pid_obj.pid+'-bid').addClass(pid_obj.last_dir);
 					    	$('.pid-'+pid_obj.pid+'-ask').addClass(pid_obj.last_dir);
 					    }
 					    
-					    setTimeout(
-					    		  function() 
-					    		  { if ( (pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') )
-					    			  {
-					    			  	$('.pid-'+pid_obj.pid+'-last').removeClass(pid_obj.last_dir);
-					    			    $('.pid-'+pid_obj.pid+'-bid').removeClass(pid_obj.last_dir);
-					    			    $('.pid-'+pid_obj.pid+'-ask').removeClass(pid_obj.last_dir);
-					    			  }
-					    		  }, 1250);
+					    setTimeout(function(){
+							if ( (pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') ){
+								$('.pid-'+pid_obj.pid+'-last').removeClass(pid_obj.last_dir);
+								$('.pid-'+pid_obj.pid+'-bid').removeClass(pid_obj.last_dir);
+								$('.pid-'+pid_obj.pid+'-ask').removeClass(pid_obj.last_dir);
+							}
+						}, 1250);
 			});
 			
 			// On receive message from server
@@ -141,8 +145,8 @@ new_conn = function (){
 					//console.log(e.data);
 				        var data = JSON.parse(e.data);
 				        if (data._event == undefined)
-					    data._event = 'tick';
-				        (events[data._event] || noop)(e,data);
+					    	data._event = 'tick';
+				        	(events[data._event] || noop)(e,data);
 				}catch(err){
 					console.log('CATCH ERR ');
 					console.log('CATCH ERR '+err.message+e.data);
@@ -156,20 +160,16 @@ new_conn = function (){
 			 
 			// On connection close
 			 sock.onclose = function() {
-			   console.log('close-fx');
-			   
-			  
-			   setTimeout(function () {
-			 	console.log('retry');
-				clearTimeout(death); // death averted
-			 	new_conn();
-				console.log("new conn: returned, death averted");
-			 	  //console.log('retry2');
+				console.log('close-fx');
+				setTimeout(function () {
+			 		console.log('retry');
+					clearTimeout(death); // death averted
+			 		new_conn();
+					console.log("new conn: returned, death averted");
+			 	  	//console.log('retry2');
 			   }, 3000);
-			   
 			 }
-				// On connection close END
-
+			// On connection close END
 }
 
 new_conn();

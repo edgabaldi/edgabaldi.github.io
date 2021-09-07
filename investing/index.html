@@ -197,8 +197,12 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sockjs.min.js"></script>
     <script type="text/javascript"> 
-      var stream = "https://stream119.forexpros.com:443";
-      window.timezoneOffset = -10800;
+      var TimeZoneID = 12,
+          stream = "https://stream119.forexpros.com:443",
+          timezoneOffset = -10800,
+          uid = 206619690;
+
+          function refresher() { void (0);}
     </script>
     <script src="js/fxindex.js" ></script>
     <script src="js/main-1.17.254.min.js" ></script>
@@ -211,7 +215,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-9826X9TT9X');
 </script>
 <script>
