@@ -156,6 +156,21 @@
 
           <table class="table table-dark table-sm table-hover table-borderless" style="margin-bottom: 0;">
 
+            <caption class="font-weight-bold text-center mt-3 rounded-top">Curva de Juros EUA</caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Ativo</th>
+                <th scope="col">%</th>
+                <th scope="col">Último</th>
+                <th scope="col">Horário</th>
+              </tr>
+            </thead>
+            <tbody id="curva-table"></tbody>
+          </table>
+
+          <table class="table table-dark table-sm table-hover table-borderless" style="margin-bottom: 0;">
+
             <caption class="font-weight-bold text-center mt-3 rounded-top">Dólar no Mundo</caption>
 
             <thead>
@@ -192,15 +207,14 @@
 
     <button class="add-button">Adicionar o App na sua tela de Inicio</button>
 
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sockjs.min.js"></script>
     <script type="text/javascript"> 
       var TimeZoneID = 12,
           stream = "https://stream119.forexpros.com:443",
-          timezoneOffset = -10800,
-          uid = 206619690;
+          timezoneOffset = -10800;
 
           function refresher() { void (0);}
     </script>
@@ -209,7 +223,7 @@
     <script src="js/tables.js" defer></script>
     <script src="js/index.js" defer></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9826X9TT9X"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9826X9TT9X"></script>
 
 <script>
   window.dataLayer = window.dataLayer || [];

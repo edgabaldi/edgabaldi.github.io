@@ -2,24 +2,25 @@ const eua = [
     {sigla: 'S&P 500 Fut', pid: '8839'},
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Dow Jones', pid: '8873'},
-    {sigla: 'Russell 2000', pid: '14202'},
-    {sigla: 'US10Y', pid: '23705'},
     {sigla: "VIX", pid: '44336'},
+];
+
+const curva_eua = [
+    {sigla: 'US2Y', pid: '23701'},
+    {sigla: 'US10Y', pid: '23705'},
+    {sigla: 'US30Y', pid: '23706'}
 ];
 
 const commodities = [
     {origem: "Petróleo EUA", sigla: 'WTI Oil', pid: '8849'},
     {origem: "Ouro Futuro CME", sigla: 'Gold', pid: '8830'},
-    {origem: "Minério de Ferro (DCE)", sigla: "Minério de Ferro (DCE)", pid: '961741'},
     {origem: "Cobre", sigla: "Cobre", pid: '8831'},
     {origem: "Bloomberg Commodities", sigla: "BCOM", pid: '948434'},
-    
 ];
 
 const brasil = [
     {origem: "Dólar Brasil", sigla: 'USD/BRL', pid: '2103'},
     {origem: "IBOV Futuro", sigla: 'INDFUT', pid: '941612'},
-    {origin: "EWZ", sigla: "EWZ", pid: '509'},
 ];
 
 const cryptos = [
@@ -40,14 +41,14 @@ const dx = [
 const emergentes = [
     {origem: "Brasil", sigla: 'USD/BRL', pid: '2103'},
     {origem: "México", sigla: 'USD/MXN', pid: '39'},
-    {origem: "Hungria", sigla: 'USD/HUF', pid: '91'},
-    {origem: "Polônia", sigla: 'USD/PLN', pid: '40'},
-    {origem: "Rússia", sigla: 'USD/RUB', pid: '2186'},
-    {origem: "Turquia", sigla: 'USD/TRY', pid: '18'},
     {origem: "África do Sul", sigla: 'USD/ZAR', pid: '17'},
     {origem: "China", sigla: 'USD/CNY', pid: '2111'},
-    {origem: "Chéquia", sigla: 'USD/CZK', pid: '103'},
+    {origem: "Turquia", sigla: 'USD/TRY', pid: '18'},
     {origem: "Índia", sigla: 'USD/INR', pid: '160'},
+    {origem: "Rússia", sigla: 'USD/RUB', pid: '2186'},
+    {origem: "Hungria", sigla: 'USD/HUF', pid: '91'},
+    {origem: "Polônia", sigla: 'USD/PLN', pid: '40'},
+    {origem: "Chéquia", sigla: 'USD/CZK', pid: '103'},
     {origem: "Indonésia", sigla: 'USD/IDR', pid: '2138'},
 ];
 
@@ -109,7 +110,7 @@ const dolar = [
     {origem: "Malásia", sigla:"USD/MYR", pid: "2168"},
 ]
 
-let all_data = eua.concat(dolar, dx, emergentes, europa, cryptos, latam, brasil, commodities);
+let all_data = eua.concat(dolar, dx, emergentes, europa, cryptos, latam, brasil, commodities, curva_eua);
 
 const row = (obj) => {
 
@@ -129,6 +130,7 @@ const createTable = (table_name, data) => {
 }
 
 createTable('#eua-table', eua);
+createTable('#curva-table', curva_eua);
 createTable('#commodities-table', commodities);
 createTable('#dx-table', dx);
 
