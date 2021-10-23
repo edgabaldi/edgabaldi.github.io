@@ -81,8 +81,19 @@ new_conn = function (){
 					
 					var pid_obj = JSON.parse(result[1]);
 					//var tz_arr = JSON.parse(pid_obj.local_time);
-					    //console.log(pid_obj);
-					    //console.log(tz_arr);
+						var table_name = summary.findTableByPid(pid_obj.pid);
+						summary.updateSummary(table_name, pid_obj)
+
+						var curr_avg = summary.getCurrentAvgFormatedOf(table_name)
+						var avg_class = summary.getCurrentAvgOf(table_name) > 0 ? "greenFont" : "redFont"
+
+						$(table_name).closest("table")
+							.find("caption .avg")
+							.html(curr_avg)
+							.removeClass("greenFont")
+							.removeClass("redFont")
+							.addClass(avg_class)
+						
 					    $('.pid-'+pid_obj.pid+'-bid').html(pid_obj.bid);
 					    $('.pid-'+pid_obj.pid+'-ask').html(pid_obj.ask);
 					    $('.pid-'+pid_obj.pid+'-last').html(pid_obj.last);

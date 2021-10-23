@@ -116,17 +116,17 @@ const row = (obj) => {
 
     return `
         <tr>
-            <td class="text-left">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
+            <td class="text-left font-weight-bold">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
             <td class="observer font-weight-bold text-center pid-${obj.pid}-pcp" data-pid="${obj.pid}">0,00%</td>
-            <td class="pid-${obj.pid}-last">0,00</td>
-            <td class="data-${obj.pid}-hora"><i class="bi bi-circle"></i></td>
+            <td class="pid-${obj.pid}-last font-weight-bold">0,00</td>
+            <td class="data-${obj.pid}-hora  font-weight-bold"><i class="bi bi-circle"></i></td>
         </tr>`;
 }
 
 const createTable = (table_name, data) => {
     const tbody = document.querySelector(table_name);
-    console.log(tbody)
-    tbody.innerHTML = data.map(obj => row(obj)).join('');   
+    tbody.innerHTML = data.map(obj => row(obj)).join('');
+    summary.initSummary(table_name, data);
 }
 
 createTable('#eua-table', eua);
