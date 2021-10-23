@@ -4,7 +4,6 @@ html {
 
 * {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
     font-family: Tahoma!important;
 }
 
@@ -34,11 +33,13 @@ body {
 
 td {
     text-align: center;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 caption {
     caption-side: top;
     padding:5px 5px;
     text-transform: uppercase;
-    color:#FFF;
+    /* color:#FFF; */
+    color: rgba(255, 255, 255, 0.7);
 }
