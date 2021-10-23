@@ -3,6 +3,8 @@ html {
 }
 
 * {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
     font-family: Tahoma!important;
 }
 
@@ -24,6 +26,10 @@ body {
 
 .redBg{
     background-color: #dc3545;
+}
+
+.defaultTextColor{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 td {

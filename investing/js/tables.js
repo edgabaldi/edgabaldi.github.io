@@ -115,11 +115,10 @@ let all_data = eua.concat(dolar, dx, emergentes, europa, cryptos, latam, brasil,
 const row = (obj) => {
 
     return `
-        <tr>
-            <td class="text-left font-weight-bold">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
+        <tr class="pid-${obj.pid}-line">
+            <td class="text-left text-uppercase font-weight-bold">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
             <td class="observer font-weight-bold text-center pid-${obj.pid}-pcp" data-pid="${obj.pid}">0,00%</td>
             <td class="pid-${obj.pid}-last font-weight-bold">0,00</td>
-            <td class="data-${obj.pid}-hora  font-weight-bold"><i class="bi bi-circle"></i></td>
         </tr>`;
 }
 
