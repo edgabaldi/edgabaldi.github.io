@@ -1,5 +1,5 @@
 const eua = [
-    {sigla: 'S&P 500 Fut', pid: '8839'},
+    {sigla: 'S&P 500', pid: '8839'},
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Dow Jones', pid: '8873'},
     {sigla: "VIX", pid: '44336'},
@@ -64,7 +64,7 @@ const latam = [
 ];
 
 const europa = [
-    {sigla: "Stoxx 600 Europe", pid: "40823"},
+    {sigla: "Stoxx 600", pid: "40823"},
     {sigla: 'Reino Unido', pid: '27'}, // FTSE 100
     {sigla: 'Alemanha', pid: '8826'}, // DAX   
     {sigla: "Milão", pid: "177"},

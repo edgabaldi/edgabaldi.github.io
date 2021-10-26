@@ -12,11 +12,11 @@ body {
   }
 
 .greenBg{
-    background-color: #28a745;
+    background-color: #28e47c;
 }
 
 .greenFont {
-    color:#28a745;
+    color:#28e47c;
 }
 
 .redFont{
@@ -24,7 +24,7 @@ body {
 }
 
 .redBg{
-    background-color: #dc3545;
+    background-color: #ff8080;
 }
 
 .defaultTextColor{
@@ -40,6 +40,9 @@ caption {
     caption-side: top;
     padding:5px 5px;
     text-transform: uppercase;
-    /* color:#FFF; */
     color: rgba(255, 255, 255, 0.7);
+}
+
+.modal-content {
+    height: 80%;
 }
