@@ -1,15 +1,44 @@
-html { 
-    font-size: 0.8rem;
-}
-
 * {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: Tahoma!important;
 }
 
 body {
-    background-color: #343a40;
-  }
+    background-color:#121212;
+}
+
+/*
+ * tables
+ * */
+
+table{
+    border: 1px solid #454d55;
+}
+
+th, caption {
+    background-color: #272c34;
+}
+
+td {
+    background-color:#121212;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+caption {
+    caption-side: top;
+    padding:5px 5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/*
+ * fonts and backgrounds
+ * */
+
+.yellowBg{
+    background-color: yellow;
+}
 
 .greenBg{
     background-color: #28e47c;
@@ -17,6 +46,10 @@ body {
 
 .greenFont {
     color:#28e47c;
+}
+
+.blackFont {
+    color:black !important;
 }
 
 .redFont{
@@ -31,17 +64,17 @@ body {
     color: rgba(255, 255, 255, 0.7);
 }
 
-td {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.7);
+.text-underline{
+    text-decoration: underline;
 }
 
-caption {
-    caption-side: top;
-    padding:5px 5px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
+.text-overline{
+    text-decoration: overline;
 }
+
+/*
+ * modal
+ * */
 
 .modal-content {
     height: 80%;

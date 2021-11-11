@@ -100,57 +100,33 @@ new_conn = function (){
 							.removeClass("redFont")
 							.addClass(pid_obj.pc_col)
 
-						
-					    $('.pid-'+pid_obj.pid+'-bid').html(pid_obj.bid);
-					    $('.pid-'+pid_obj.pid+'-ask').html(pid_obj.ask);
-					    $('.pid-'+pid_obj.pid+'-last').html(pid_obj.last);
-					    $('.pid-'+pid_obj.pid+'-last_nColor').html(pid_obj.last);
-					    $('.pid-'+pid_obj.pid+'-high').html(pid_obj.high);
-					    $('.pid-'+pid_obj.pid+'-low').html(pid_obj.low);
-					    $('.pid-'+pid_obj.pid+'-pc').html(pid_obj.pc);
-					    
-					    // $('.pid-' + pid_obj.pid + '-arrowSmall').removeClass('greenArrowIcon');
-				        // $('.pid-' + pid_obj.pid + '-arrowSmall').removeClass('redArrowIcon');
-				        // $('.pid-' + pid_obj.pid + '-arrowSmall').removeClass('grayArrowIcon');
-				        
-				        // if (pid_obj.pc_col == 'greenFont'){
-						// 	$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('greenArrowIcon');
-				        // }else if (pid_obj.pc_col == 'redFont'){
-				        // 	$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('redArrowIcon');
-				        // }else if (pid_obj.pc_col == 'blackFont'){
-				        // 	$('.pid-' + pid_obj.pid + '-arrowSmall').addClass('grayArrowIcon');
-				        // }
-				        
-					    $('.pid-'+pid_obj.pid+'-pc').removeClass('greenFont');
-					    $('.pid-'+pid_obj.pid+'-pc').removeClass('redFont');
-					    $('.pid-'+pid_obj.pid+'-pc').addClass(pid_obj.pc_col);
-					    
-					    $('.pid-'+pid_obj.pid+'-pcp').html(pid_obj.pcp);
-					    
-					    $('.pid-'+pid_obj.pid+'-pcp').removeClass('greenFont');
-					    $('.pid-'+pid_obj.pid+'-pcp').removeClass('redFont');
-					    $('.pid-'+pid_obj.pid+'-pcp').addClass(pid_obj.pc_col);
-					    
-					    //$('.pid-'+pid_obj.pid+'-time').html(pid_obj.time);
-					    //$('.pid-'+pid_obj.pid+'-time').html(tz_arr[TimeZoneID]);
-					    //$('.pid-'+pid_obj.pid+'-time').html(pid_obj.local_time);
-					    $('.pid-'+pid_obj.pid+'-time').html(getUTCTime(pid_obj.timestamp, window.timezoneOffset));
-					    
-					    
-					    $('.pid-'+pid_obj.pid+'-turnover').html(pid_obj.turnover);
 
-					    if ((pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') ){
-					    	$('.pid-'+pid_obj.pid+'-last').addClass(pid_obj.last_dir).addClass("defaultTextColor");
-					    	$('.pid-'+pid_obj.pid+'-bid').addClass(pid_obj.last_dir);
-					    	$('.pid-'+pid_obj.pid+'-ask').addClass(pid_obj.last_dir);
-					    }
+						$('.pid-'+pid_obj.pid+'-ativo')
+							.addClass("yellowBg")
+							.addClass("blackFont");
+
+					    $('.pid-'+pid_obj.pid+'-last').html(pid_obj.last);
+					    $('.pid-'+pid_obj.pid+'-pcp').html(pid_obj.pcp);
+						
+
+						if(pid_obj.high == pid_obj.last){
+							$('.pid-'+pid_obj.pid+'-last').addClass("text-overline")
+						}
+
+						if(pid_obj.low == pid_obj.last){
+							$('.pid-'+pid_obj.pid+'-last').addClass("text-underline")
+						}
 					    
 					    setTimeout(function(){
-							if ( (pid_obj.last_dir == 'redBg') || (pid_obj.last_dir == 'greenBg') ){
-								$('.pid-'+pid_obj.pid+'-last').removeClass(pid_obj.last_dir).removeClass("defaultTextColor");
-								$('.pid-'+pid_obj.pid+'-bid').removeClass(pid_obj.last_dir);
-								$('.pid-'+pid_obj.pid+'-ask').removeClass(pid_obj.last_dir);
-							}
+
+							$('.pid-'+pid_obj.pid+'-ativo')
+								.removeClass("yellowBg")
+								.removeClass("blackFont");
+							
+							$('.pid-'+pid_obj.pid+'-last')
+								.removeClass("text-overline")
+								.removeClass("text-underline");
+							
 						}, 1250);
 			});
 			
