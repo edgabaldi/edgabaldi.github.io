@@ -323,32 +323,6 @@
   gtag('js', new Date());
   gtag('config', 'G-9826X9TT9X');
 </script>
-<script>
-
-(function(){
-    var originalAddClassMethod = jQuery.fn.addClass;
-    jQuery.fn.addClass = function(){
-        var result = originalAddClassMethod.apply( this, arguments );
-        jQuery(this).trigger('cssClassChanged');
-        return result;
-    }
-})();
-
-$(function(){
-    $(".observer").bind('cssClassChanged', function(){ 
-      var $this = $(this);
-      let pid = $this.data('pid');
-      var $hora = $(`.data-${pid}-hora`);
-      let hora_str = $(`.pid-${pid}-time`).text();
-      
-      if(Boolean(hora_str)){
-          var $icon = $('<i>').addClass('bi bi-clock').attr('title', hora_str).clone();
-          $hora.empty().append($icon);
-      }
-
-    });
-}); 
-</script>
 
 </body>
 </html>

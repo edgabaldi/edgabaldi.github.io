@@ -98,13 +98,13 @@ new_conn = function (){
 							.find("td")
 							.removeClass("greenFont")
 							.removeClass("redFont")
+							.removeClass("blackFont")
 							.addClass(pid_obj.pc_col)
-
 
 						$('.pid-'+pid_obj.pid+'-ativo')
 							.addClass("yellowBg")
 							.addClass("blackFont");
-
+						
 					    $('.pid-'+pid_obj.pid+'-last').html(pid_obj.last);
 					    $('.pid-'+pid_obj.pid+'-pcp').html(pid_obj.pcp);
 						

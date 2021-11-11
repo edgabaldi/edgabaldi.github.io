@@ -116,8 +116,8 @@ const row = (obj) => {
 
     return `
         <tr class="pid-${obj.pid}-line">
-            <td class="pid-${obj.pid}-ativo text-left text-uppercase font-weight-bold">${obj.sigla}<span class="d-none pid-${obj.pid}-time"></span></td>
-            <td class="observer font-weight-bold text-center pid-${obj.pid}-pcp" data-pid="${obj.pid}">0,00%</td>
+            <td class="pid-${obj.pid}-ativo text-left text-uppercase font-weight-bold">${obj.sigla}</td>
+            <td class="pid-${obj.pid}-pcp text-center font-weight-bold"">0,00%</td>
             <td class="pid-${obj.pid}-last font-weight-bold">0,00</td>
         </tr>`;
 }
