@@ -3,6 +3,7 @@ const eua = [
     {sigla: 'Nasdaq', pid: '8874'},
     {sigla: 'Dow Jones', pid: '8873'},
     {sigla: 'US2Y', pid: '23701'},
+    {sigla: 'US10Y', pid: '23705'},
 ];
 
 const commodities = [
@@ -28,6 +29,7 @@ const europa = [
 ];
 
 const emergentes = [
+    {origem: "México", sigla: 'USD/MXN', pid: '39'},
     {origem: "África do Sul", sigla: 'USD/ZAR', pid: '17'},
     {origem: "Colombia", sigla: "USD/COP", pid: "2112"},
     {origem: "Chile", sigla: "USD/CLP", pid: "2110"},
