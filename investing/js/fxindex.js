@@ -87,6 +87,20 @@ new_conn = function (){
 						var curr_avg = summary.getCurrentAvgFormatedOf(table_name)
 						var avg_class = summary.getCurrentAvgOf(table_name) > 0 ? "greenFont" : "redFont"
 
+						if(pid_obj.pid === '941612'){
+
+							document.title = `INDFUT | ${pid_obj.pcp} | ${pid_obj.last}`;
+
+							var link = document.querySelector("link[rel~='icon']");
+
+							if (!link) {
+								link = document.createElement('link');
+								link.rel = 'icon';
+								document.head.appendChild(link);
+							}
+							link.href = avg_class === 'greenFont' ? 'img/green.ico' : 'img/red.ico';
+						}
+
 						$(table_name).closest("table")
 							.find("caption .avg")
 							.html(curr_avg)
