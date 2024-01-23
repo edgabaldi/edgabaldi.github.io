@@ -119,6 +119,13 @@ const row = (obj) => {
     return `
         <tr class="pid-${obj.pid}-line">
             <td class="pid-${obj.pid}-ativo text-left text-uppercase font-weight-bold">${obj.sigla}</td>
+            <td class="pid-${obj.pid}-percentil">
+                <div class="demo-container">
+                    <div class="progress-bar">
+                        <div class="progress-bar-value"></div>
+                    </div>
+                </div>
+            </td>
             <td class="pid-${obj.pid}-pcp text-center font-weight-bold"">0,00%</td>
             <td class="pid-${obj.pid}-last font-weight-bold">0,00</td>
         </tr>`;

@@ -74,10 +74,7 @@ new_conn = function (){
 			
 			on("tick",function(e,data) {
 					var content = JSON.parse(e.data);
-								
-					//console.log(content.message);
 					var result = content.message.split('::');
-					
 					
 					var pid_obj = JSON.parse(result[1]);
 					//var tz_arr = JSON.parse(pid_obj.local_time);
@@ -86,6 +83,9 @@ new_conn = function (){
 
 						var curr_avg = summary.getCurrentAvgFormatedOf(table_name)
 						var avg_class = summary.getCurrentAvgOf(table_name) > 0 ? "greenFont" : "redFont"
+
+						const percentilValue = calculatePercentil(pid_obj);
+						$('.pid-'+pid_obj.pid+'-percentil .progress-bar-value').css('width', percentilValue + '%');
 
 						if(pid_obj.pid === '941612'){
 
@@ -197,4 +197,12 @@ function sendMessage(){
                     
     // Send it now
     sock.send(JSON.stringify(send));
+}
+
+function calculatePercentil(pid_obj){
+	const last = parseFloat(pid_obj.last.replace(',',''));
+	const min = parseFloat(pid_obj.low.replace(',',''));
+	const max = parseFloat(pid_obj.high.replace(',',''));
+	const percentil = ((last - min) / (max - min)) * 100;
+	return isNaN(percentil) ? 0 : percentil;
 }
